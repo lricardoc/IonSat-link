@@ -5,7 +5,7 @@ m = 10; %mass (kg)
 a = 6678; %semimajor axis (km)
 e = 0.001; %eccentricity
 i = 51.6; %inclination (degrees)
-O = 197; %Right ascension of the right ascending node (degrees) %max 197, min 300.5 %181
+O = 120; %Right ascension of the right ascending node (degrees) %max 197, min 300.5 %181
 o = 90; %Argument of the perigee (degrees)                      %max 90, min 0      %90
 nu = 0; %True anomaly (degrees)
 
@@ -33,7 +33,10 @@ R_earth = 6.3712e+6;
 lat=43.6;    %latitude in degrees
 long=1.44;   %longitude in degrees
 h=189;      %altitude in meters
+alt_orbit=a*1000-R_earth;
 
+d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
 
 orbitcom
 %data=sim('orbitcom');
+
