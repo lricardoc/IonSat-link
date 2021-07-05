@@ -37,6 +37,6 @@ alt_orbit=a*1000-R_earth;
 
 d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
 
-orbitcom
-%data=sim('orbitcom');
+orbitcom_R20b
+%data=sim('orbitcom_R20b');
 
