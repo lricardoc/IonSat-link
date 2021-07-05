@@ -26,14 +26,8 @@ tsimulation=N_orbits*Torbit;
 %tsimulation=10000;
 %tsimulation=2700;
 delta_t = 0.5; %simulation time step (seconds)
-
-%%% GET PROPER IGRF COEFFICIENTS %%%
-date = [year,month,day];
-gh = loadigrfcoefsim(datenum(date));
-%Define order of the IGRF approximation
-nmax = 2;
-%Earth Radius in meters used in IGRF 2020 model
 R_earth = 6.3712e+6; 
+
 
 %% Ground Station parameters
 lat=43.6;    %latitude in degrees
@@ -41,5 +35,5 @@ long=1.44;   %longitude in degrees
 h=189;      %altitude in meters
 
 
-A_EKFv1
-data=sim('A_EKFv1');
+orbitcom
+%data=sim('orbitcom');
