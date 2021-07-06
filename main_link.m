@@ -13,7 +13,7 @@ nu = 0; %True anomaly (degrees)
 year = 2020;
 month = 1;
 day = 1;
-hours = 0;
+hours = 4;
 minutes = 0;
 seconds = 0;
 
