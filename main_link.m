@@ -1,6 +1,7 @@
 %Orbit simulation
 %The object is assumed submitted only to gravity and it's mass is m in kg
 m = 10; %mass (kg)
+
 %Initialisation of Keplerian parameters
 a = 6678; %semimajor axis (km)
 e = 0.001; %eccentricity
@@ -28,20 +29,28 @@ tsimulation=N_orbits*Torbit;
 delta_t = 0.5; %simulation time step (seconds)
 R_earth = 6.3712e+6; 
 
+%% Antenna Parameters
+
+freq_up_antenna=135e6;
+freq_down_antenna=430e6;
+Spacecraft_Transmitter_Power_Output=2; %in Watts
+
 
 %% Ground Station parameters
 lat=43.6;    %latitude in degrees
 long=1.44;   %longitude in degrees
 h=189;      %altitude in meters
 alt_orbit=a*1000-R_earth;
-
 d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
+slant_range=sqrt(R_earth^2+(R_earth+alt_orbit)^2 - (2*R_earth*(R_earth+alt_orbit)*cos(acos(R_earth/(R_earth+alt_orbit))*cos(Coelevation)-Coelevation)));
 
 load('antennagain.mat')
 global Gtest Azimuth Coelevation
 stp=10;
 Azimuth=[0:stp:360];
 Coelevation=[0:stp:180];
+
+Ground_Station_Transmitter_Power_Output=11.8; %in Watts
 
 orbitcom_R20b
 %data=sim('orbitcom_R20b');
