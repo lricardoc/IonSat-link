@@ -42,7 +42,7 @@ long=1.44;   %longitude in degrees
 h=189;      %altitude in meters
 alt_orbit=a*1000-R_earth;
 d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
-slant_range=sqrt(R_earth^2+(R_earth+alt_orbit)^2 - (2*R_earth*(R_earth+alt_orbit)*cos(acos(R_earth/(R_earth+alt_orbit))*cos(Coelevation)-Coelevation)));
+%slant_range=sqrt(R_earth^2+(R_earth+alt_orbit)^2 - (2*R_earth*(R_earth+alt_orbit)*cos(acos(R_earth/(R_earth+alt_orbit))*cos(Coelevation)-Coelevation)));
 
 load('antennagain.mat')
 global Gtest Azimuth Coelevation
