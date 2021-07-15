@@ -29,11 +29,6 @@ tsimulation=N_orbits*Torbit;
 delta_t = 0.5; %simulation time step (seconds)
 R_earth = 6.3712e+6; 
 
-%% Antenna Parameters
-
-freq_up_antenna=135e6;
-freq_down_antenna=430e6;
-Spacecraft_Transmitter_Power_Output=2; %in Watts
 
 
 %% Ground Station parameters
@@ -50,7 +45,6 @@ stp=10;
 Azimuth=[0:stp:360];
 Coelevation=[0:stp:180];
 
-Ground_Station_Transmitter_Power_Output=11.8; %in Watts
 
 orbitcom_R20b
 %data=sim('orbitcom_R20b');
