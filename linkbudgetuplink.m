@@ -8,6 +8,11 @@ range=u(2);
 frequency=2100e6; %Hz
 c=3e8; %m/s celerity
 boltzmann=-228.6;
+R_earth = 6.3712e+6; 
+a = 6678;
+alt_orbit=a*1000-R_earth;
+d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
+
 
 %Ground Station
 gs_transmitter_power=11.8; % in Watts
@@ -27,7 +32,10 @@ sc_EIRP=sc_antenna_gain+sc_dBW-sc_total_tranmission_line_losses-Loss_from_duplex
 %uplink
 gs_Antenna_Pointing_loss=0.9;
 Gnd_to_sc_Antenna_Polarization_Loss=3;
+
+
 FSL=20*log10(4*pi*range*frequency/c);
+
 Atmospheric_loss=3;
 Ionospheric_loss=0;
 Rain_loss=0;
