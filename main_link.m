@@ -27,6 +27,7 @@ tsimulation=N_orbits*Torbit;
 %tsimulation=10000;
 %tsimulation=2700;
 delta_t = 0.5; %simulation time step (seconds)
+
 R_earth = 6.3712e+6; 
 
 
