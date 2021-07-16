@@ -47,5 +47,5 @@ Azimuth=[0:stp:360];
 Coelevation=[0:stp:180];
 
 
-orbitcom_R20b
-%data=sim('orbitcom_R20b');
+orbitcom_R20b_ter
+%data=sim('orbitcom_R20b_ter');
