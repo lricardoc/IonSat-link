@@ -8,10 +8,10 @@ range=u(2);
 frequency=2100e6; %Hz
 c=3e8; %m/s celerity
 boltzmann=-228.6;
-R_earth = 6.3712e+6; 
-a = 6678;
-alt_orbit=a*1000-R_earth;
-d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
+% R_earth = 6.3712e+6; 
+% a = 6678;
+% alt_orbit=a*1000-R_earth;
+% d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
 
 
 %Ground Station

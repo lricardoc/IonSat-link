@@ -1,6 +1,17 @@
 function [phi_theta] = cart2spherical(u)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%This function converts cartesian coordinates to spherical (co-elevation
+%and azimuth
+% Syntax:
+% y=cart2spherical(u)
+% Input argument:
+%   1 * u(1):      cartesian coordinate x
+%   2 * u(2):      cartesian coordinate y
+%   3 * u(3):      cartesian coordinate z
+% Output argument
+%    * y=[phi;theta];
+% Co-elevation is defined as the angle from z axis towards the xy plane
+% Azimuth is defined as the angle from x to y in the xy plane 
+%    * two values of co-elevation (theta) and azimuth (phi)
 x=u(1);
 y=u(2);
 z=u(3);

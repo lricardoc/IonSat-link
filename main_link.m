@@ -40,12 +40,12 @@ alt_orbit=a*1000-R_earth;
 d_0=(sqrt((R_earth+alt_orbit)^2-R_earth^2))/1000;
 %slant_range=sqrt(R_earth^2+(R_earth+alt_orbit)^2 - (2*R_earth*(R_earth+alt_orbit)*cos(acos(R_earth/(R_earth+alt_orbit))*cos(Coelevation)-Coelevation)));
 
-load('antennagain2.mat')
+load('antennagain2.mat')    %this .mat file has the matrix of gains used in the antennas.
 global Guhf Gvhf Azimuth Coelevation
-stp=5;
+stp=5; %Step for interpolation (has to be the same as the one in the matrices Guhf, etc)
 Azimuth=[0:stp:360];
 Coelevation=[0:stp:180];
 
 
-orbitcom_R20b_ter
-%data=sim('orbitcom_R20b_ter');
+orbitcom_R20b_finalversion
+%data=sim('orbitcom_R20b_finalversion');
