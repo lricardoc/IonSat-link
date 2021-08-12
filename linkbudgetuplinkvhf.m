@@ -5,7 +5,7 @@ sc_antenna_gain=u(1);
 range=u(2);
 
 % Parameters
-frequency=136e6; %Hz
+frequency=145.8e6; %Hz
 c=3e8; %m/s celerity
 boltzmann=-228.6;
 R_earth = 6.3712e+6; 
