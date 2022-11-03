@@ -1,10 +1,17 @@
+%This script transform the values of gain from a list to a matrix, the list
+%can be copied from a CSV obtained from HFSS, then execute this script to
+%get the matrix.
+
 %theta (coelevation) from 0 to 180
 %phi (azimuth) from 0 to 360)
 %theta in X axis
 %phi in Y axis
-Guhf=zeros(37,73);
 
-step=5;
+
+%% UHF
+Guhf=zeros(37,73);      %Initialize matrix
+
+step=5;     %step of results obtained from HFSS
 
 % for Y=0:step:180
 %     Gtest(Y/10+1,1)=gainHF(Y/step+1,3)
@@ -19,10 +26,10 @@ for X=0:step:360
     end
 end  
 
-%%
-Gvhf=zeros(37,73);
+%% VHF
+Gvhf=zeros(37,73);      %Initialize matrix
 
-step=5;
+step=5;     %step of results obtained from HFSS
 
 % for Y=0:step:180
 %     Gtest(Y/10+1,1)=gainHF(Y/step+1,3)
@@ -37,8 +44,10 @@ for X=0:step:360
     end
 end  
 
-%%
-%test
+%% S Band
+
+%% Test uhf
+%test if the matrix is correctly calculated
 X=[0:step:360];
 Y=[0:step:180];
 V=Guhf;
