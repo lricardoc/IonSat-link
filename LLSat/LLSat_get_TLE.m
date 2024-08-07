@@ -1,0 +1,12 @@
+LLSat.ID = 73737;
+LLSat.orbitalElements.Inclination = 51.63999999999999;
+LLSat.orbitalElements.RightAscensionOfAscendingNode = 359.9;
+LLSat.orbitalElements.Eccentricity = 0.000999999999999634;
+LLSat.orbitalElements.ArgumentOfPeriapsis = 29.99999999997303;
+LLSat.orbitalElements.TrueAnomaly = 90.0000000000269;
+%LLSat.orbitalElements.SMA = 6660.99999999999;
+LLSat.orbitalElements.SMA = 6663.55;
+%LLSat.orbitalElements.Period = 5559;
+LLSat.orbitalElements.Period = 2*pi*sqrt(LLSat.orbitalElements.SMA^3/398600.435507);
+TLE = getTLE(LLSat);
+disp(TLE);
